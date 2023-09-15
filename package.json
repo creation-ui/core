@@ -27,7 +27,7 @@
     "ci:publish": "pnpm publish -r",
     "ci:version": "git fetch --tags && npm version $(git describe --abbrev=0 --tags)",
     "package:version": "pnpm  ci:version",
-    "package:build": "pnpm rm:build && pnpm build",
+    "package:build": "pnpm build:rm && pnpm build",
     "package:publish": "pnpm _publish",
     "package": "pnpm package:version && pnpm package:build && pnpm package:publish"
   },
