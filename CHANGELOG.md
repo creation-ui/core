@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.1](https://github.com/creation-ui/core/compare/v0.4.0...v0.4.1) (2023-09-15)
+
+
+### Bug Fixes
+
+* ignore ci:version fails ([92b5651](https://github.com/creation-ui/core/commit/92b56517e062585eb772ee5d5a23684e08bdfdf1))
+* update deps ([e0c2d4f](https://github.com/creation-ui/core/commit/e0c2d4f6752e19d431d12364beec46f4b855add8))
+
 ## [0.4.0](https://github.com/creation-ui/core/compare/v0.1.1...v0.4.0) (2023-09-15)
 
 
