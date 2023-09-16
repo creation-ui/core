@@ -6,7 +6,7 @@
     "isolatedModules": true,
     "allowJs": true,
     "esModuleInterop": true,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "moduleResolution": "node",
     "module": "commonjs",
     "target": "es5",

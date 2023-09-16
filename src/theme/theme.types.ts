@@ -4,6 +4,7 @@ import type {
   ElementTheme,
   ElementTypography,
   ElementVariant,
+  JSXNode,
   TailwindColorSet,
 } from '../types'
 
@@ -77,6 +78,6 @@ export type ThemeProps = {
 }
 
 export interface ThemeProviderProps {
-  children?: React.ReactNode
+  children?: JSXNode
   theme?: Partial<ThemeProps>
 }

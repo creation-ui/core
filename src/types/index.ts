@@ -1,4 +1,20 @@
-import type React from 'react'
+export type JSXNode =
+  | Node
+  | (string & {})
+  | number
+  | boolean
+  | null
+  | undefined
+  | JSXNode[]
+
+export type FunctionalComponent<P = {}> = (props: P) => JSXNode
+export type ForwardedComponent<P = {}> = {
+  (props: P, ref?: any): JSXNode | null
+}
+
+export type HTMLProps<T> = {
+  [P in keyof T]?: T[P]
+}
 
 export const ELEMENT_STATUS = [
   'primary',
@@ -7,6 +23,7 @@ export const ELEMENT_STATUS = [
   'success',
   'info',
 ] as const
+
 export const ELEMENT_SIZES = ['sm', 'md', 'lg'] as const
 export const ELEMENT_THEMES = ['dark', 'light'] as const
 export const ELEMENT_BASE_VARIANTS = ['contained', 'outlined'] as const
@@ -37,7 +54,29 @@ export const ELEMENT_STATES = [
   'default',
 ] as const
 
-export type HTMLInputType = React.InputHTMLAttributes<HTMLInputElement>['type']
+export type HTMLInputType =
+  | 'button'
+  | 'checkbox'
+  | 'color'
+  | 'date'
+  | 'datetime-local'
+  | 'email'
+  | 'file'
+  | 'hidden'
+  | 'image'
+  | 'month'
+  | 'number'
+  | 'password'
+  | 'radio'
+  | 'range'
+  | 'reset'
+  | 'search'
+  | 'submit'
+  | 'tel'
+  | 'text'
+  | 'time'
+  | 'url'
+  | 'week'
 
 export type Breakpoints = (typeof BREAKPOINTS)[number]
 export type ElementStatus = (typeof ELEMENT_STATUS)[number]
@@ -57,12 +96,6 @@ export type ElementPlacement = {
   horizontal: ElementPlacementHorizontal
   vertical: ElementPlacementVertical
 }
-
-export type GetComponentProps<T> = T extends
-  | React.ComponentType<infer P>
-  | React.Component<infer P>
-  ? P
-  : never
 
 export type DropdownOptionType = {
   id: string
@@ -148,11 +181,11 @@ export interface BaseComponentProps {
   /**
    * Error message
    */
-  error?: React.ReactNode
+  error?: JSXNode
   /**
    * Helper text
    */
-  helperText?: React.ReactNode
+  helperText?: JSXNode
 }
 
 export interface InputBaseProps extends Omit<BaseComponentProps, 'className'> {
@@ -167,11 +200,11 @@ export interface InputBaseProps extends Omit<BaseComponentProps, 'className'> {
   /**
    * Element to be displayed on the left side of the input
    */
-  startAdornment?: React.ReactNode
+  startAdornment?: JSXNode
   /**
    * Element to be displayed on the right side of the input
    */
-  endAdornment?: React.ReactNode
+  endAdornment?: JSXNode
   /**
    * Type of HTML input
    */
@@ -179,7 +212,7 @@ export interface InputBaseProps extends Omit<BaseComponentProps, 'className'> {
   /**
    * Children
    */
-  children: React.ReactNode
+  children: JSXNode
   /**
    * Show clear input icon?
    */
@@ -216,9 +249,9 @@ export type InputClassNamesAPI = {
 }
 
 export type ReadableError = {
-  message: React.ReactNode
-  title: React.ReactNode
-  code?: React.ReactNode
+  message: JSXNode
+  title: JSXNode
+  code?: JSXNode
 }
 
 export type DropdownValueType =
@@ -228,12 +261,10 @@ export type DropdownValueType =
   | string[]
   | null
 
-type OptionComponentType =
-  | React.ForwardRefExoticComponent<
-      Omit<OptionProps & React.HTMLProps<HTMLLIElement>, 'ref'> &
-        React.RefAttributes<HTMLLIElement>
-    >
-  | React.FC<OptionProps & React.HTMLProps<HTMLLIElement>>
+export type OptionComponentProps = OptionProps & HTMLProps<HTMLLIElement>
+export type OptionComponentType =
+  | ForwardedComponent<Omit<OptionComponentProps, 'ref'> & { ref?: any }>
+  | FunctionalComponent<OptionComponentProps>
 
 export type DropdownMaxHeight = number | string | 'available'
 
@@ -257,7 +288,7 @@ export interface DropdownProps extends BaseComponentProps {
   /**
    * Component to display list options
    */
-  selectedOptionComponent?: React.FC<SelectedOptionProps>
+  selectedOptionComponent?: FunctionalComponent<SelectedOptionProps>
   /**
    * Default value to display when component is not controlled
    */
@@ -353,12 +384,12 @@ export interface OptionProps {
   option: DropdownOptionType
   multiple?: boolean
   size?: ElementSize
-  children?: React.ReactNode
+  children?: JSXNode
 }
 
 export interface SelectedOptionProps {
   option: DropdownOptionType
-  children?: React.ReactNode
+  children?: JSXNode
   idx: number
 }
 
