@@ -1,4 +1,4 @@
-import type { ThemeProps } from './theme.types'
+import type { ThemeProps } from './types'
 
 const theme: ThemeProps = {
   theme: 'light',

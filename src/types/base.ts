@@ -1,11 +1,4 @@
-export type JSXNode =
-  | Node
-  | (string & {})
-  | number
-  | boolean
-  | null
-  | undefined
-  | JSXNode[]
+export type JSXNode = any
 
 export type FunctionalComponent<P = {}> = (props: P) => JSXNode
 export type ForwardedComponent<P = {}> = {

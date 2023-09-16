@@ -2,7 +2,7 @@ import twColors from 'tailwindcss/colors'
 
 const { lime, red, amber, white, black, gray } = twColors
 
-const colors = {
+export const colors = {
   inherit: 'inherit',
   current: 'currentColor',
   transparent: 'transparent',
@@ -26,5 +26,3 @@ const colors = {
   warning: amber,
   info: gray,
 }
-
-export default colors
