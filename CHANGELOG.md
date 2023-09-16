@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.5](https://github.com/creation-ui/core/compare/v0.4.4...v0.4.5) (2023-09-16)
+
+
+### Bug Fixes
+
+* HTMLInputType is generic ([75578b2](https://github.com/creation-ui/core/commit/75578b26b323c4a17444dccc5f722444b87fd1c3))
+
 ## [0.4.4](https://github.com/creation-ui/core/compare/v0.4.3...v0.4.4) (2023-09-16)
 
 
