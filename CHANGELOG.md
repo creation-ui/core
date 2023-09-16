@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.2](https://github.com/creation-ui/core/compare/v0.4.1...v0.4.2) (2023-09-16)
+
+
+### Bug Fixes
+
+* missing react deps ([b2901e3](https://github.com/creation-ui/core/commit/b2901e36fe0633d92956960f3a2504911b3d908f))
+
 ## [0.4.1](https://github.com/creation-ui/core/compare/v0.4.0...v0.4.1) (2023-09-15)
 
 
