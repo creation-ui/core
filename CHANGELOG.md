@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.3](https://github.com/creation-ui/core/compare/v0.4.2...v0.4.3) (2023-09-16)
+
+
+### Bug Fixes
+
+* export theme constants ([b6acc62](https://github.com/creation-ui/core/commit/b6acc626f0a49f4ca3db60a8857b63d99028f18d))
+
 ## [0.4.2](https://github.com/creation-ui/core/compare/v0.4.1...v0.4.2) (2023-09-16)
 
 
