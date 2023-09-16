@@ -1,7 +1,7 @@
 {
   "name": "@creation-ui/core",
   "homepage": "https://creation-ui.com",
-  "version": "0.4.3",
+  "version": "0.4.2",
   "description": "@creation-ui/core is a core package for components library in Creation UI family.",
   "repository": "https://github.com/creation-ui/core",
   "license": "MIT",
