@@ -1,10 +1,8 @@
-import themeColors from '../theme/base/colors'
-import typography from '../theme/base/typography'
-import breakpoints from '../theme/base/breakpoints'
 import twColors from 'tailwindcss/colors'
 import forms from './forms'
 import headless from '@headlessui/tailwindcss'
 import merge from 'lodash.merge'
+import { colors, typography, breakpoints } from '@theme'
 
 const deprecated = ['lightBlue', 'warmGray', 'trueGray', 'coolGray', 'blueGray']
 
@@ -22,7 +20,7 @@ const creationUiConfig = {
     'node_modules/@creation-ui/solid/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    colors: { ...twColors, ...themeColors },
+    colors: { ...twColors, ...colors },
     fontFamily: typography,
     screens: breakpoints,
     // boxShadow: shadows,
