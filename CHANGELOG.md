@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.6](https://github.com/creation-ui/core/compare/v0.4.5...v0.4.6) (2023-09-17)
+
+
+### Bug Fixes
+
+* replace [@theme](https://github.com/theme) import ([b232a69](https://github.com/creation-ui/core/commit/b232a6967944a89a3cc4270fabf13dbbf6a01a41))
+
 ## [0.4.5](https://github.com/creation-ui/core/compare/v0.4.4...v0.4.5) (2023-09-16)
 
 
