@@ -1,3 +1,4 @@
+import type { VariantProps } from 'class-variance-authority'
 import { cva } from 'class-variance-authority'
 import clsx from 'clsx'
 import values from 'lodash.values'
@@ -82,17 +83,20 @@ export const sharedReadOnlyCVA = {
   false: 'pointer-events-auto',
 }
 
-const loaderClasses = cva(['absolute', 'top-0', 'right-0', microInteractions], {
-  variants: {
-    loading: {
-      true: ['opacity-100', 'pointer-events-none'],
-      false: ['opacity-0', 'pointer-events-auto'],
+export const loaderClasses = cva(
+  ['absolute', 'top-0', 'right-0', microInteractions],
+  {
+    variants: {
+      loading: {
+        true: ['opacity-100', 'pointer-events-none'],
+        false: ['opacity-0', 'pointer-events-auto'],
+      },
     },
-  },
-  defaultVariants: {
-    loading: false,
-  },
-})
+    defaultVariants: {
+      loading: false,
+    },
+  }
+)
 
 export const invalid = {
   text: ['dark:invalid:text-error-400', 'invalid:text-error-600'],
@@ -416,8 +420,6 @@ export const selectOptionIconClasses = cva(['font-extrabold', 'text-xl'], {
     active: { true: ['opacity-50'] },
   },
 })
-
-import type { VariantProps } from 'class-variance-authority'
 
 const debugClassesCVA = cva(['ring-1'], {
   variants: {

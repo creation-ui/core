@@ -2,7 +2,7 @@ import twColors from 'tailwindcss/colors'
 import forms from './forms'
 import headless from '@headlessui/tailwindcss'
 import merge from 'lodash.merge'
-import { colors, typography, breakpoints } from '@theme'
+import { colors, typography, breakpoints } from '../theme'
 
 const deprecated = ['lightBlue', 'warmGray', 'trueGray', 'coolGray', 'blueGray']
 
