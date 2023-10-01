@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.1](https://github.com/creation-ui/core/compare/v0.5.0...v0.5.1) (2023-10-01)
+
+
+### Miscellaneous Chores
+
+* release 0.5.1 ([206591d](https://github.com/creation-ui/core/commit/206591d886169f249dc2f8084b27aff279cc5d5f))
+
 ## [0.5.0](https://github.com/creation-ui/core/compare/v0.4.6...v0.5.0) (2023-10-01)
 
 
