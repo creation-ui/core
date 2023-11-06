@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.0](https://github.com/creation-ui/core/compare/v0.5.1...v0.6.0) (2023-11-06)
+
+
+### Features
+
+* update theme drawer properties ([d96656c](https://github.com/creation-ui/core/commit/d96656c28935f5358092458b5a61871d4be9025a))
+
 ## [0.5.1](https://github.com/creation-ui/core/compare/v0.5.0...v0.5.1) (2023-10-01)
 
 
