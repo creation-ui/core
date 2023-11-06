@@ -21,7 +21,18 @@ type ThemeColors = {
 }
 
 type ThemeDrawers = {
-  size: number | string
+  /**
+   * The height classNames of the `top` and `bottom` drawers. This being a class name allows to use Tailwind's responsive breakpoints.
+   */
+  heightClassNames: string
+  /**
+   * The width classNames of the `right` and `left` drawers. This being a class name allows to use Tailwind's responsive breakpoints.
+   */
+  widthClassNames: string
+  /**
+   * The position of the drawer.
+   * `right` | `left` | `top` | `bottom`
+   */
   position: ElementPosition
 }
 

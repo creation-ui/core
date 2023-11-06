@@ -14,8 +14,9 @@ const theme: ThemeProps = {
   },
   respectReducedMotion: true,
   drawers: {
-    size: '50vw',
     position: 'right',
+    widthClassNames: 'md:w-1/2',
+    heightClassNames: 'md:h-1/2',
   },
   typography: {
     h1: {
