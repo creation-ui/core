@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.0](https://github.com/creation-ui/core/compare/v0.6.0...v0.7.0) (2024-01-29)
+
+
+### Features
+
+* upgrade tailwindcss, cva ([af3a903](https://github.com/creation-ui/core/commit/af3a9032cf9ac39d6c645d81b46242005ff03f54))
+
 ## [0.6.0](https://github.com/creation-ui/core/compare/v0.5.1...v0.6.0) (2023-11-06)
 
 
